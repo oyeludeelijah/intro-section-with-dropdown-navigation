@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <!-- Commented out styles -->
+    <!-- 
+    <style>
+      .attribution { font-size: 11px; text-align: center; }
+      .attribution a { color: hsl(228, 45%, 44%); }
+    </style> 
+    -->
+  </head>
+  <body>
+    <div class="container" id="page-container">
+      <header class="header">
+        <nav class="nav nav--desktop">
+          <div class="nav__left">
+            <img src="./assets/images/logo.svg" alt="Logo" class="nav__logo" />
+            <ul class="nav__menu">
+              <li class="nav__item nav__item--features">
+                <a href="#" class="dropdown-icon-container">
+                  Features
+                  <img
+                    src="./assets/images/icon-arrow-down.svg"
+                    class="desktop-menu-dropdown dropdown-icon"
+                    alt=""
+                  />
+                </a>
+                <div class="dropdown dropdown--features">
+                  <a href="#" class="features">
+                    <img src="./assets/images/icon-todo.svg" alt="" />
+                    Todo list
+                  </a>
+
+                  <a href="#" class="features"
+                    ><img src="./assets/images/icon-calendar.svg" alt="" />
+                    Calender</a
+                  >
+
+                  <a href="#" class="features">
+                    <img
+                      class=""
+                      src="./assets/images/icon-reminders.svg"
+                      alt=""
+                    />
+                    Reminders
+                  </a>
+
+                  <a href="#" class="features">
+                    <img src="./assets/images/icon-planning.svg" alt="" />
+                    Planning
+                  </a>
+                </div>
+              </li>
+
+              <li class="nav__item nav__item--company">
+                <a href="#" class="dropdown-icon-container"
+                  >Company
+                  <img
+                    src="./assets/images/icon-arrow-down.svg"
+                    class="desktop-menu-dropdown dropdown-icon"
+                    alt=""
+                /></a>
+                <div class="dropdown dropdown--company">
+                  <a href="#" class="features">History</a>
+                  <a href="#" class="features">Our Team</a>
+                  <a href="#" class="features">Blog</a>
+                </div>
+              </li>
+              <li class="nav__item nav__item--careers">
+                <a href="#">Careers</a>
+              </li>
+              <li class="nav__item nav__item--about"><a href="#">About</a></li>
+            </ul>
+          </div>
+
+          <div class="nav__right">
+            <button class="nav__btn nav__btn--login">Login</button>
+            <button class="nav__btn nav__btn--register">Register</button>
+          </div>
+        </nav>
+
+        <nav class="nav nav--mobile">
+          <div class="nav__left">
+            <img src="./assets/images/logo.svg" alt="Logo" class="nav__logo" />
+          </div>
+
+          <div class="nav__right" id="mobile--menu_open">
+            <img src="./assets/images/icon-menu.svg" alt="" />
+          </div>
+        </nav>
+      </header>
+
+      <main class="main">
+        <div class="hero__content">
+          <h1 class="hero__title">Make remote work</h1>
+          <p class="hero__description">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+
+          <button class="hero__button">Learn more</button>
+
+          <div class="credits">
+            <img
+              src="./assets/images/client-databiz.svg"
+              alt="Databiz logo"
+              class="credits__logo credits__logo--databiz"
+            />
+            <img
+              src="./assets/images/client-audiophile.svg"
+              alt="Audiophile logo"
+              class="credits__logo credits__logo--audiophile"
+            />
+            <img
+              src="./assets/images/client-meet.svg"
+              alt="Meet logo"
+              class="credits__logo credits__logo--meet"
+            />
+            <img
+              src="./assets/images/client-maker.svg"
+              alt="Maker logo"
+              class="credits__logo credits__logo--maker"
+            />
+          </div>
+        </div>
+
+        <div class="hero__image-container">
+          <img
+            src="./assets/images/image-hero-desktop.png"
+            alt="Hero image"
+            class="hero__image hero__image--desktop"
+          />
+          <img
+            src="./assets/images/image-hero-mobile.png"
+            alt="Hero image"
+            class="hero__image hero__image--mobile"
+          />
+        </div>
+      </main>
+
+      <!-- MOBILE MENU -->
+      <div class="overlay" id="overlay"></div>
+
+      <div class="mobile-menu" id="mobile--menu">
+        <div class="close-menu" id="mobile--menu_close">
+          <img src="./assets/images/icon-close-menu.svg" alt="" />
+        </div>
+
+        <ul class="nav__menu">
+          <li class="nav__item nav__item--features">
+            <a href="#" class="mobile-dropdown-icon-container">
+              Features
+              <img
+                src="./assets/images/icon-arrow-down.svg"
+                class="mobile-menu-dropdown dropdown-icon"
+                alt=""
+              />
+            </a>
+
+            <div class="dropdown__mobile hidden dropdown--features">
+              <a href="#" class="features">
+                <img src="./assets/images/icon-todo.svg" alt="" />
+                Todo list
+              </a>
+
+              <a href="#" class="features"
+                ><img src="./assets/images/icon-calendar.svg" alt="" />
+                Calender
+              </a>
+
+              <a href="#" class="features">
+                <img class="" src="./assets/images/icon-reminders.svg" alt="" />
+                Reminders
+              </a>
+
+              <a href="#" class="features">
+                <img src="./assets/images/icon-planning.svg" alt="" />
+                Planning
+              </a>
+            </div>
+          </li>
+
+          <li class="nav__item nav__item--company">
+            <a href="#" class="mobile-dropdown-icon-container"
+              >Company
+              <img
+                src="./assets/images/icon-arrow-down.svg"
+                class="mobile-menu-dropdown dropdown-icon"
+                alt=""
+              />
+            </a>
+
+            <div class="dropdown__mobile hidden dropdown--company">
+              <a href="#" class="features">History</a>
+              <a href="#" class="features">Our Team</a>
+              <a href="#" class="features">Blog</a>
+            </div>
+          </li>
+          <li class="nav__item nav__item--careers">
+            <a href="#">Careers</a>
+          </li>
+          <li class="nav__item nav__item--about"><a href="#">About</a></li>
+        </ul>
+
+        <div class="nav__bottom">
+          <button class="nav__btn nav__btn--login">Login</button>
+          <button class="nav__btn nav__btn--register">Register</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>
