@@ -24,22 +24,16 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/assets/css/style.css" />
-
-    <!-- Commented out styles -->
-    <!-- 
-    <style>
-      .attribution { font-size: 11px; text-align: center; }
-      .attribution a { color: hsl(228, 45%, 44%); }
-    </style> 
-    -->
   </head>
   <body>
     <div class="container" id="page-container">
       <header class="header">
+        <!-- Desktop Navigation -->
         <nav class="nav nav--desktop">
           <div class="nav__left">
             <img src="./assets/images/logo.svg" alt="Logo" class="nav__logo" />
             <ul class="nav__menu">
+              <!-- Features Dropdown -->
               <li class="nav__item nav__item--features">
                 <a href="#" class="dropdown-icon-container">
                   Features
@@ -54,21 +48,14 @@
                     <img src="./assets/images/icon-todo.svg" alt="" />
                     Todo list
                   </a>
-
-                  <a href="#" class="features"
-                    ><img src="./assets/images/icon-calendar.svg" alt="" />
-                    Calender</a
-                  >
-
                   <a href="#" class="features">
-                    <img
-                      class=""
-                      src="./assets/images/icon-reminders.svg"
-                      alt=""
-                    />
+                    <img src="./assets/images/icon-calendar.svg" alt="" />
+                    Calender
+                  </a>
+                  <a href="#" class="features">
+                    <img src="./assets/images/icon-reminders.svg" alt="" />
                     Reminders
                   </a>
-
                   <a href="#" class="features">
                     <img src="./assets/images/icon-planning.svg" alt="" />
                     Planning
@@ -76,24 +63,30 @@
                 </div>
               </li>
 
+              <!-- Company Dropdown -->
               <li class="nav__item nav__item--company">
-                <a href="#" class="dropdown-icon-container"
-                  >Company
+                <a href="#" class="dropdown-icon-container">
+                  Company
                   <img
                     src="./assets/images/icon-arrow-down.svg"
                     class="desktop-menu-dropdown dropdown-icon"
                     alt=""
-                /></a>
+                  />
+                </a>
                 <div class="dropdown dropdown--company">
                   <a href="#" class="features">History</a>
                   <a href="#" class="features">Our Team</a>
                   <a href="#" class="features">Blog</a>
                 </div>
               </li>
+
+              <!-- Simple Menu Items -->
               <li class="nav__item nav__item--careers">
                 <a href="#">Careers</a>
               </li>
-              <li class="nav__item nav__item--about"><a href="#">About</a></li>
+              <li class="nav__item nav__item--about">
+                <a href="#">About</a>
+              </li>
             </ul>
           </div>
 
@@ -103,11 +96,11 @@
           </div>
         </nav>
 
+        <!-- Mobile Navigation Header -->
         <nav class="nav nav--mobile">
           <div class="nav__left">
             <img src="./assets/images/logo.svg" alt="Logo" class="nav__logo" />
           </div>
-
           <div class="nav__right" id="mobile--menu_open">
             <img src="./assets/images/icon-menu.svg" alt="" />
           </div>
@@ -115,15 +108,16 @@
       </header>
 
       <main class="main">
+        <!-- Content Section -->
         <div class="hero__content">
           <h1 class="hero__title">Make remote work</h1>
           <p class="hero__description">
             Get your team in sync, no matter your location. Streamline
             processes, create team rituals, and watch productivity soar.
           </p>
-
           <button class="hero__button">Learn more</button>
 
+          <!-- Client Logos -->
           <div class="credits">
             <img
               src="./assets/images/client-databiz.svg"
@@ -148,6 +142,7 @@
           </div>
         </div>
 
+        <!-- Hero Image Section -->
         <div class="hero__image-container">
           <img
             src="./assets/images/image-hero-desktop.png"
@@ -162,15 +157,17 @@
         </div>
       </main>
 
-      <!-- MOBILE MENU -->
+      <!-- Mobile Menu Overlay -->
       <div class="overlay" id="overlay"></div>
 
+      <!-- Mobile Menu -->
       <div class="mobile-menu" id="mobile--menu">
         <div class="close-menu" id="mobile--menu_close">
           <img src="./assets/images/icon-close-menu.svg" alt="" />
         </div>
 
         <ul class="nav__menu">
+          <!-- Features Dropdown -->
           <li class="nav__item nav__item--features">
             <a href="#" class="mobile-dropdown-icon-container">
               Features
@@ -180,23 +177,19 @@
                 alt=""
               />
             </a>
-
             <div class="dropdown__mobile hidden dropdown--features">
               <a href="#" class="features">
                 <img src="./assets/images/icon-todo.svg" alt="" />
                 Todo list
               </a>
-
-              <a href="#" class="features"
-                ><img src="./assets/images/icon-calendar.svg" alt="" />
+              <a href="#" class="features">
+                <img src="./assets/images/icon-calendar.svg" alt="" />
                 Calender
               </a>
-
               <a href="#" class="features">
-                <img class="" src="./assets/images/icon-reminders.svg" alt="" />
+                <img src="./assets/images/icon-reminders.svg" alt="" />
                 Reminders
               </a>
-
               <a href="#" class="features">
                 <img src="./assets/images/icon-planning.svg" alt="" />
                 Planning
@@ -204,28 +197,33 @@
             </div>
           </li>
 
+          <!-- Company Dropdown -->
           <li class="nav__item nav__item--company">
-            <a href="#" class="mobile-dropdown-icon-container"
-              >Company
+            <a href="#" class="mobile-dropdown-icon-container">
+              Company
               <img
                 src="./assets/images/icon-arrow-down.svg"
                 class="mobile-menu-dropdown dropdown-icon"
                 alt=""
               />
             </a>
-
             <div class="dropdown__mobile hidden dropdown--company">
               <a href="#" class="features">History</a>
               <a href="#" class="features">Our Team</a>
               <a href="#" class="features">Blog</a>
             </div>
           </li>
+
+          <!-- Simple Menu Items -->
           <li class="nav__item nav__item--careers">
             <a href="#">Careers</a>
           </li>
-          <li class="nav__item nav__item--about"><a href="#">About</a></li>
+          <li class="nav__item nav__item--about">
+            <a href="#">About</a>
+          </li>
         </ul>
 
+        <!-- Mobile Login/Register -->
         <div class="nav__bottom">
           <button class="nav__btn nav__btn--login">Login</button>
           <button class="nav__btn nav__btn--register">Register</button>

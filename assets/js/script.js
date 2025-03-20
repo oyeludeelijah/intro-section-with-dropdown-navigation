@@ -10,26 +10,19 @@ const mobileMenuOpen = document.getElementById("mobile--menu_open");
 const mobileMenuClose = document.getElementById("mobile--menu_close");
 
 mobileMenuOpen.addEventListener("click", () => {
-  mobileMenu.style.display = "block"; // FIX THIS///
-  mobileMenu.style.transform = "translateX(0)";
+  mobileMenu.classList.add("active");
   overlay.classList.add("visible");
-  document.body.style.overflow = "hidden"; // Prevents scrolling while menu is open
+  document.body.style.overflow = "hidden";
 });
 
-mobileMenuClose.addEventListener("click", () => {
-  mobileMenu.style.display = "none"; // FIX THIS///
-  mobileMenu.style.transform = "translateX(100%)";
-  overlay.classList.remove("visible");
-  document.body.style.overflow = ""; // Restores scrolling
-});
-
-// Also close menu when clicking on the overlay
-overlay.addEventListener("click", () => {
-  mobileMenu.style.display = "none"; // FIX THIS///
-  mobileMenu.style.transform = "translateX(100%)";
+function closeMenu() {
+  mobileMenu.classList.remove("active");
   overlay.classList.remove("visible");
   document.body.style.overflow = "";
-});
+}
+
+mobileMenuClose.addEventListener("click", closeMenu);
+overlay.addEventListener("click", closeMenu);
 
 // For desktop nav
 
@@ -37,27 +30,18 @@ dropdownIconContainer.forEach((link) => {
   const icon = link.querySelector(".desktop-menu-dropdown");
   const dropdown = link.nextElementSibling;
 
-  link.addEventListener("mouseover", () => {
+  link.addEventListener("mouseenter", () => {
     icon.src = "./assets/images/icon-arrow-up.svg";
-
-    if (dropdown && dropdown.classList.contains("dropdown")) {
-      dropdown.style.visibility = "visible";
-      dropdown.style.opacity = "1";
-    }
+    dropdown?.classList.add("dropdown-visible");
   });
 
-  link.addEventListener("mouseout", () => {
+  link.addEventListener("mouseleave", () => {
     icon.src = "./assets/images/icon-arrow-down.svg";
-
-    if (dropdown && dropdown.classList.contains("dropdown")) {
-      dropdown.style.visibility = "hidden";
-      dropdown.style.opacity = "0";
-    }
+    dropdown?.classList.remove("dropdown-visible");
   });
 });
 
 // for mobile nav
-
 const MobileDropdownIconContainer = document.querySelectorAll(
   ".mobile-dropdown-icon-container"
 );
